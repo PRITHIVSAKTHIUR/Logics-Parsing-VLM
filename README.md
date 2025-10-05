@@ -1,12 +1,7 @@
 # **Logics-Parsing-VLM**
 
-<table border="1" cellspacing="0" cellpadding="5">
-  <tr>
-    <td><img src="https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/cBt0BJc308VHWf4JJibtJ.png" alt="Image 1" width="300"></td>
-    <td><img src="https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/J0HqPp2h7xNoEsf4ll60a.png" alt="Image 2" width="300"></td>
-  </tr>
-</table>
-
+| ![1111](https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/cBt0BJc308VHWf4JJibtJ.png) | ![2222](https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/J0HqPp2h7xNoEsf4ll60a.png) |
+|---|---|
 
 ## Overview
 
