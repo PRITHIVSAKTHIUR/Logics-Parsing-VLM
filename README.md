@@ -1,17 +1,21 @@
 # **VLM-Parsing**
+
+VLM-Parsing is a Gradio-based web application for parsing documents and images into structured HTML and Markdown formats using advanced Vision Language Models (VLMs). It supports PDF and image files, converting them into clean, logical representations while preserving elements like paragraphs, headings, tables, figures, and formulas. The app provides a user-friendly interface for uploading files, previewing pages, processing documents, and downloading results.
+
+ ---
  
  <img width="1843" height="1332" alt="Screenshot 2025-10-06 at 12-16-40 VLM Parsing - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/681ca1b1-f3e6-405d-95b4-1385397a5aeb" />
 
 <img width="1611" height="913" alt="Screenshot 2025-10-06 at 12-29-58 HTML Online Viewer" src="https://github.com/user-attachments/assets/91ce1cd7-0b01-4829-b3c9-b05c1dfd7639" />
 
-## Overview
+---
 
-VLM-Parsing is a Gradio-based web application for parsing documents and images into structured HTML and Markdown formats using advanced Vision Language Models (VLMs). It supports PDF and image files, converting them into clean, logical representations while preserving elements like paragraphs, headings, tables, figures, and formulas. The app provides a user-friendly interface for uploading files, previewing pages, processing documents, and downloading results.
+## Overview
 
 This repository hosts the source code for the demo application. For the original model and research, refer to the links below.
 
-- Model Page: [Logics-Parsing on Hugging Face](https://huggingface.co/Logics-MLLM/Logics-Parsing)
-- Original GitHub: [alibaba/Logics-Parsing](https://github.com/alibaba/Logics-Parsing)
+- Models: [Logics-Parsing on Hugging Face](https://huggingface.co/Logics-MLLM/Logics-Parsing), [Gliese-OCR-7B-Post1.0](https://huggingface.co/prithivMLmods/Gliese-OCR-7B-Post1.0), etc..
+- Original GitHub Logics-Parsing: [alibaba/Logics-Parsing](https://github.com/alibaba/Logics-Parsing)
 - ArXiv Paper: [Logics-Parsing](https://arxiv.org/abs/2509.19760)
 
 ## Features
