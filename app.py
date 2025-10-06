@@ -46,6 +46,17 @@ model_2 = Qwen2_5_VLForConditionalGeneration.from_pretrained(
 ).to(device).eval()
 logger.info(f"Model '{MODEL_ID_2}' loaded successfully.")
 
+# Model 3: olmOCR-7B-0825
+MODEL_ID_3 = "allenai/olmOCR-7B-0825"
+logger.info(f"Loading model 3: {MODEL_ID_3}")
+processor_3 = AutoProcessor.from_pretrained(MODEL_ID_3, trust_remote_code=True)
+model_3 = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+    MODEL_ID_3,
+    trust_remote_code=True,
+    torch_dtype=torch.float16 if device == "cuda" else torch.float32
+).to(device).eval()
+logger.info(f"Model '{MODEL_ID_3}' loaded successfully.")
+
 @spaces.GPU
 def parse_page(image: Image.Image, model_name: str) -> str:
     """
@@ -55,6 +66,8 @@ def parse_page(image: Image.Image, model_name: str) -> str:
         current_processor, current_model = processor_1, model_1
     elif model_name == "Gliese-OCR-7B-Post1.0":
         current_processor, current_model = processor_2, model_2
+    elif model_name == "olmOCR-7B-0825":
+        current_processor, current_model = processor_3, model_3
     else:
         raise ValueError(f"Unknown model choice: {model_name}")
 
@@ -234,19 +247,19 @@ def main():
 
         gr.HTML("""
         <div class="header-text">
-            <h1>📄 Logics-Parsing: Document Parsing VLM</h1>
-            <p style="font-size: 1.1em; color: #6b7280;">An advanced Vision Language Model to parse documents and images into clean HTML and Markdown.</p>
+            <h1>📄 Multimodal: VLM Parsing</h1>
+            <p style="font-size: 1.1em; color: #6b7280;">An advanced Vision Language Model to parse documents and images into clean Markdown(.md)</p>
             <div style="display: flex; justify-content: center; gap: 20px; margin: 15px 0;">
-                <a href="https://huggingface.co/Logics-MLLM/Logics-Parsing" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">🤗 Model Page</a>
-                <a href="https://github.com/alibaba/Logics-Parsing" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">💻 GitHub</a>
-                <a href="https://arxiv.org/abs/2509.19760" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">📝 Arxiv Paper</a>
+                <a href="https://huggingface.co/collections/prithivMLmods/mm-vlm-parsing-68e33e52bfb9ae60b50602dc" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">🤗 Model Info</a>
+                <a href="https://github.com/PRITHIVSAKTHIUR/VLM-Parsing" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">💻 GitHub</a>
+                <a href="https://huggingface.co/models?pipeline_tag=image-text-to-text&sort=trending" target="_blank" style="text-decoration: none; color: #2563eb; font-weight: 500;">📝 Multimodal VLMs</a>
             </div>
         </div>
         """)
 
         with gr.Row(elem_classes=["main-container"]):
             with gr.Column(scale=1):
-                model_choice = gr.Dropdown(choices=["Logics-Parsing", "Gliese-OCR-7B-Post1.0"], label="Select Model⚡️", value="Logics-Parsing")
+                model_choice = gr.Dropdown(choices=["Logics-Parsing", "Gliese-OCR-7B-Post1.0", "olmOCR-7B-0825"], label="Select Model⚡️", value="Logics-Parsing")
                 file_input = gr.File(label="Upload PDF or Image", file_types=[".pdf", ".jpg", ".jpeg", ".png"], type="filepath")
                 image_preview = gr.Image(label="Preview", type="pil", interactive=False, height=280)
                 
