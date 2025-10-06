@@ -1,11 +1,11 @@
-# **Logics-Parsing-VLM**
+# **VLM-Parsing**
 
 | ![1111](https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/cBt0BJc308VHWf4JJibtJ.png) | ![2222](https://cdn-uploads.huggingface.co/production/uploads/65bb837dbfb878f46c77de4c/J0HqPp2h7xNoEsf4ll60a.png) |
 |---|---|
 
 ## Overview
 
-Logics-Parsing-VLM is a Gradio-based web application for parsing documents and images into structured HTML and Markdown formats using advanced Vision Language Models (VLMs). It supports PDF and image files, converting them into clean, logical representations while preserving elements like paragraphs, headings, tables, figures, and formulas. The app provides a user-friendly interface for uploading files, previewing pages, processing documents, and downloading results.
+VLM-Parsing is a Gradio-based web application for parsing documents and images into structured HTML and Markdown formats using advanced Vision Language Models (VLMs). It supports PDF and image files, converting them into clean, logical representations while preserving elements like paragraphs, headings, tables, figures, and formulas. The app provides a user-friendly interface for uploading files, previewing pages, processing documents, and downloading results.
 
 This repository hosts the source code for the demo application. For the original model and research, refer to the links below.
 
